@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const path = require('path');
+const messageRoutes = require('./routes/messageRoutes');
 
 // Load environment variables
 dotenv.config();
@@ -12,6 +13,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/api', messageRoutes);
 
 // Set View Engine
 app.set('view engine', 'ejs');
