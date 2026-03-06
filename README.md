@@ -119,9 +119,9 @@ node consumer.js
 | Email Service | Nodemailer + Gmail SMTP |
 
 ---
-
+ 
 ## 🔐 Security Notes
 
 - Never commit your `.env` file — it's in `.gitignore`
-- Always use Gmail App Passwords instead of your real password
+- Always use Gmail App Passwords instead of your real password 
 - Keep your `CLOUDAMQP_URL` private as it contains credentials
